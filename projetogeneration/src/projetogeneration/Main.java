@@ -42,16 +42,14 @@ public class Main {
 				primeiro.setPronomeCampeao("CAMPEÃ");
 				break;
 			case 3:
-				primeiro.setPronomeObliquo(" ");
-				primeiro.setPronomePessoal(" ");
-				primeiro.setPronomeCampeao("CAMPEÃO");
+				primeiro.setPronomeObliquo("U");
+				primeiro.setPronomePessoal("ELU");
+				primeiro.setPronomeCampeao("VENCEDORE");
 			default:
 				System.out.println("Opção inválida! Favor tentar novamente!");
-
 			}
 
 		} while (op < 1 || op > 3);
-		
 		
 		do {
 			System.out.print("\nPerna preferida (1- direita / 2 - esquerda): ");
@@ -73,7 +71,7 @@ public class Main {
 
 		do {
 			System.out.print(
-					"Qual goleiro você quer enfrentar?" + "\n1 - Taffarel" + "\n2 - Cássio" + "\n3 - Rogério Ceni"
+					"\nQual goleiro você quer enfrentar?" + "\n1 - Taffarel" + "\n2 - Cássio" + "\n3 - Rogério Ceni"
 							+ "\n4 - Marcos" + "\n5 - Buffon" + "\n6 - Neuer" + "\nDigite a opção escolhida: ");
 			op = teclado.nextInt();
 			switch (op) {
