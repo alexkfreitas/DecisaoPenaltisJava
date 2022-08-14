@@ -2,16 +2,20 @@ package projetogeneration;
 
 public class Jogador {
 
-	String nomeJogador;
-	int idade, peso;
-	double altura;
+	private String nomeJogador, pronomeObliquo, pronomePessoal, pronomeCampeao;
+	private int idade, peso;
+	private double altura;
 
-	public Jogador(String nomeJogador, int idade, int peso, double altura) {
+	public Jogador(String nomeJogador, int idade, int peso, double altura, String pronomeObliquo, String pronomePessoal, String pronomeCampeao) {
 		
 		this.nomeJogador = nomeJogador;
 		this.idade = idade;
 		this.peso = peso;
 		this.altura = altura;
+		this.pronomeObliquo = pronomeObliquo;
+		this.pronomePessoal = pronomePessoal;
+		this.pronomeCampeao = pronomeCampeao;
+		
 	}
 	
 	
@@ -53,6 +57,46 @@ public class Jogador {
 	public void setAltura(double altura) {
 		this.altura = altura;
 	}
+
+
+
+	public String getPronomeObliquo() {
+		return pronomeObliquo;
+	}
+
+
+
+	public void setPronomeObliquo(String pronomeObliquo) {
+		this.pronomeObliquo = pronomeObliquo;
+	}
+
+
+
+	public String getPronomePessoal() {
+		return pronomePessoal;
+	}
+
+
+
+	public void setPronomePessoal(String pronomePessoal) {
+		this.pronomePessoal = pronomePessoal;
+	}
+
+
+
+	public String getPronomeCampeao() {
+		return pronomeCampeao;
+	}
+
+
+
+	public void setPronomeCampeao(String pronomeCampeao) {
+		this.pronomeCampeao = pronomeCampeao;
+	}
+
+
+	
+	
 	
 	
 	
