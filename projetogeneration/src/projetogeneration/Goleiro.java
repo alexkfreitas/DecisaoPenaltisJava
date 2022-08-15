@@ -2,8 +2,8 @@ package projetogeneration;
 
 public class Goleiro extends Jogador {
 
-	public Goleiro(String nomeJogador, int idade, int peso, double altura) {
-		super(nomeJogador, idade, peso, altura);
+	public Goleiro(String nomeJogador, int idade, int peso, double altura,int genero) {
+		super(nomeJogador, idade, peso, altura,genero);
 		
 	}
 	
