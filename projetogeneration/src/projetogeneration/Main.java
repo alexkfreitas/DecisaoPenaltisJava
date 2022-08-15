@@ -16,7 +16,7 @@ public class Main {
 		Goleiro goleiro2 = new Goleiro();
 		Scanner teclado = new Scanner(System.in);
 
-		System.out.println("\n\n-------------DADOS DO JOGADOR 1--------------------------");
+		System.out.println("\n\n-------------DADOS DO JOGADORE 1--------------------------");
 		System.out.print("\n\nNome: ");
 		primeiro.nomeJogador = teclado.next();
 		System.out.print("\n\nIdade: ");
@@ -27,15 +27,19 @@ public class Main {
 		primeiro.peso = teclado.nextInt();
 		do {
 			System.out.print("\nPerna preferida (1- direita / 2 - esquerda): ");
+	
 			op = teclado.nextInt();
 			switch (op) {
 
 			case 1:
 				primeiro.pernaPreferida = "DIREITO";
+				System.out.println("\nVocê escolheu a perna DIREITA");
 				break;
 			case 2:
 				primeiro.pernaPreferida = "ESQUERDO";
+				System.out.println("\nVocê escolheu a perna ESQUERDA");
 				break;
+				
 			default:
 				System.out.println("Opção inválida! Favor tentar novamente!");
 
@@ -52,33 +56,40 @@ public class Main {
 					+ "\n5 - Buffon"
 					+ "\n6 - Neuer"
 					+ "\nDigite a opção escolhida: ");
+			
 			op=teclado.nextInt();
 			switch(op) {
 			
 			case 1:
 				goleiro1.nomeJogador="Taffarel";
+				System.out.println("\nVocê escolheu o goleiro Taffarel");
 				break;
 			case 2:
 				goleiro1.nomeJogador="Cássio";
+				System.out.println("\nVocê escolheu o goleiro Cássio");
 				break;
 			case 3:
 				goleiro1.nomeJogador="Rogério Ceni";
+				System.out.println("\nVocê escolheu o goleiro Rogério Ceni");
 				break;
 			case 4:
 				goleiro1.nomeJogador = "Marcos";
+				System.out.println("\nVocê escolheu o goleiro Marcos");
 				break;
 			case 5:
 				goleiro1.nomeJogador="Buffon";
+				System.out.println("\nVocê escolheu o goleiro Buffon");
 				break;
 			case 6: 
 				goleiro1.nomeJogador="Neuer";
+				System.out.println("\nVocê escolheu o goleiro Neuer");
 				break;
 				default:
 					System.out.println("Opção inválida! Escolha entre as opções de 1 a 6!");
 			}
 		} while(op<1 || op>6);
 
-		System.out.println("\n\n-------------DADOS DO JOGADOR 2--------------------------");
+		System.out.println("\n\n-------------DADOS DO JOGADORE 2--------------------------");
 		System.out.print("\n\nNome: ");
 		segundo.nomeJogador = teclado.next();
 		System.out.print("\n\nIdade: ");
@@ -94,9 +105,11 @@ public class Main {
 
 			case 1:
 				segundo.pernaPreferida = "DIREITO";
+				System.out.println("\nVocê escolheu a perna DIREITA");
 				break;
 			case 2:
 				segundo.pernaPreferida = "ESQUERDO";
+				System.out.println("\nVocê escolheu a perna ESQUERDA");
 				break;
 			default:
 				System.out.println("Opção inválida! Favor tentar novamente!");
@@ -118,21 +131,27 @@ public class Main {
 			
 			case 1:
 				goleiro2.nomeJogador="Taffarel";
+				System.out.println("\nVocê escolheu o goleiro Taffarel");
 				break;
 			case 2:
 				goleiro2.nomeJogador="Cássio";
+				System.out.println("\nVocê escolheu o goleiro Cássio");
 				break;
 			case 3:
 				goleiro2.nomeJogador="Rogério Ceni";
+				System.out.println("\nVocê escolheu o goleiro Rogério Ceni");
 				break;
 			case 4:
 				goleiro2.nomeJogador ="Marcos";
+				System.out.println("\nVocê escolheu o goleiro Marcos");
 				break;
 			case 5:
 				goleiro2.nomeJogador="Buffon";
+				System.out.println("\nVocê escolheu o goleiro Buffon");
 				break;
 			case 6: 
 				goleiro2.nomeJogador="Neuer";
+				System.out.println("\nVocê escolheu o goleiro Neuer");
 				break;
 				default:
 					System.out.println("Opção inválida! Escolha entre as opções de 1 a 6!");
