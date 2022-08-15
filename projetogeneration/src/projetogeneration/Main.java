@@ -25,6 +25,24 @@ public class Main {
 		primeiro.altura = teclado.nextDouble();
 		System.out.print("\n\nPeso: ");
 		primeiro.peso = teclado.nextInt();
+		System.out.println("\n\nGênero: \n[1] - Feminino \n[2] - Masculino \n[3] - Outros"); //adiciona o gênero de jogadore 1
+		primeiro.genero = teclado.nextInt();
+		switch (primeiro.genero) {
+		case 1:
+			primeiro.terceiraPessoa = "ela";
+			primeiro.terceiraPessoaPosse = "dela";
+			break;
+		case 2:
+			primeiro.terceiraPessoa = "ele";
+			primeiro.terceiraPessoaPosse = "dele";
+			break;
+		case 3:
+			primeiro.terceiraPessoa = "elu";
+			primeiro.terceiraPessoaPosse = "delu";
+			break;
+		}
+		System.out.println("É "+primeiro.terceiraPessoa+", "+primeiro.nomeJogador); //verifica o gênero de jogadore 1
+		
 		do {
 			System.out.print("\nPerna preferida (1- direita / 2 - esquerda): ");
 			op = teclado.nextInt();
@@ -87,8 +105,27 @@ public class Main {
 		segundo.altura = teclado.nextDouble();
 		System.out.print("\n\nPeso: ");
 		segundo.peso = teclado.nextInt();
+		System.out.println("\n\nGênero: \n[1] - Feminino \n[2] - Masculino \n[3] - Outros"); //adiciona ogênero de jogadore 2
+		segundo.genero = teclado.nextInt();
+		
+		switch (segundo.genero) {
+		case 1:
+			segundo.terceiraPessoa = "ela";
+			segundo.terceiraPessoaPosse = "dela";
+			break;
+		case 2:
+			segundo.terceiraPessoa = "ele";
+			segundo.terceiraPessoaPosse = "dele";
+			break;
+		case 3:
+			segundo.terceiraPessoa = "elu";
+			segundo.terceiraPessoaPosse = "delu";
+			break;
+		}
+		System.out.println("É "+segundo.terceiraPessoa+", "+segundo.nomeJogador);
 		do {
-			System.out.print("\nPerna preferida (1- direita / 2 - esquerda): ");
+			System.out.print("\nPerna preferida (1- direita / 2 - esquerda): "); //verifica o gênero de jogadore 2
+			
 			op = teclado.nextInt();
 			switch (op) {
 
@@ -155,29 +192,29 @@ public class Main {
 		System.out.println("1");
 		TimeUnit.SECONDS.sleep(1);
 
-		System.out.println("\nBEM AMIGOS DA REDE GLOBO!! ESTAMOS CHEGANDO PRA ESSA DISPUTA DE PÊNALTIS DECISIVA!");
+		System.out.println("\nBEM AMIGUES DA REDE GLOBO!! ESTAMOS CHEGANDO PRA ESSA DISPUTA DE PÊNALTIS DECISIVA!"); //adiciona pronome neutro
 		TimeUnit.SECONDS.sleep(2);
-		System.out.println("HOJE É DECISÃO DE CAMPEONAAAAAAAAAAATO, AMIGO!!!");
+		System.out.println("HOJE É DECISÃO DE CAMPEONAAAAAAAAAAATO, AMIGUES!!!");
 		TimeUnit.SECONDS.sleep(2);
 		System.out.println("VAMOS VER ENTÃO QUEM SERÃO OS JOGADORES DE HOJE!!");
 		TimeUnit.SECONDS.sleep(2);
-		System.out.println("COMEÇANDO COM ELE");
+		System.out.println("COMEÇANDO COM "+primeiro.terceiraPessoa.toUpperCase()); //adiciona tratamento neutro
 		TimeUnit.SECONDS.sleep(2);
 		System.out.println("QUE TEM " + primeiro.idade + " ANOS DE IDADE!");
 		TimeUnit.SECONDS.sleep(2);
 		System.out.println("COM " + primeiro.altura + " DE ALTURA!");
 		TimeUnit.SECONDS.sleep(2);
-		System.out.println("PESANDO " + primeiro.peso + "QUILOS!");
+		System.out.println("PESANDO " + primeiro.peso + " QUILOS!");
 		TimeUnit.SECONDS.sleep(2);
-		System.out.println("QUE TEM UM PÉ " + primeiro.pernaPreferida + " FATAL!!");
+		System.out.println("QUE TEM UM PÉ " + primeiro.pernaPreferida.toUpperCase() + " FATAL!!");
 		TimeUnit.SECONDS.sleep(2);
-		System.out.println("ELE!!");
+		System.out.println(primeiro.terceiraPessoa.toUpperCase()); //adiciona tratamento neutro
 		TimeUnit.SECONDS.sleep(2);
 		System.out.println(primeiro.nomeJogador.toUpperCase() + "!!!");
 
-		System.out.println("E PRA ENFRENTAR O " + primeiro.nomeJogador.toUpperCase() + " NESSA FINAL ELETRIZANTE!!");
+		System.out.println("E PRA ENFRENTAR " + primeiro.nomeJogador.toUpperCase() + " NESSA FINAL ELETRIZANTE!!");
 		TimeUnit.SECONDS.sleep(2);
-		System.out.println("ELE!!!");
+		System.out.println(segundo.terceiraPessoa.toUpperCase()); //adiciona tratamento neutro
 		TimeUnit.SECONDS.sleep(2);
 		System.out.println("COM SEUS " + segundo.idade + " ANOS DE IDADE!!");
 		TimeUnit.SECONDS.sleep(2);
@@ -187,18 +224,18 @@ public class Main {
 		TimeUnit.SECONDS.sleep(2);
 		System.out.println("QUE TEM UM PÉ " + segundo.pernaPreferida + " QUE FAZ GOLEIRO TREMER AS PERNAS!!");
 		TimeUnit.SECONDS.sleep(2);
-		System.out.println("ELE!!!");
+		System.out.println(segundo.terceiraPessoa.toUpperCase()); //adiciona tratamento neutro
 		TimeUnit.SECONDS.sleep(2);
 		System.out.println(segundo.nomeJogador.toUpperCase() + "!!!");
 		TimeUnit.SECONDS.sleep(2);
 
-		System.out.println("VAI SER UMA DISPUTA ELETRIZANTE!!! OS DOIS JOGADORES SÃO EXTREMAMENTE TALENTOSOS!!!");
+		System.out.println("VAI SER UMA DISPUTA ELETRIZANTE!!! AMBUS JOGADORES SÃO EXTREMAMENTE TALENTOSES!!!"); //adiciona tratamento neutro
 		TimeUnit.SECONDS.sleep(2);
-		System.out.println("JÁ VAI COMEÇAR!! " + primeiro.nomeJogador.toUpperCase() + " VAI INICIAR AS COBRANÇAS!");
+		System.out.println("JÁ VAI COMEÇAR!! " + primeiro.nomeJogador.toUpperCase() + " VAI INICIAR A COBRANÇA!"); //corrige concordância
 		TimeUnit.SECONDS.sleep(2);
 		System.out.println("JÁ É POSSÍVEL SENTIR A PRESSÃO DA TORCIDA!!");
 		TimeUnit.SECONDS.sleep(2);
-		System.out.println("É UM MOMENTO QUE EXIGE UM PSICOLÓGICO MUUUUUUUUITO GRAAANDE, AMIGO!!!");
+		System.out.println("É UM MOMENTO QUE EXIGE UM PSICOLÓGICO MUUUUUUUUITO GRAAANDE, AMIGUE!!!");
 		TimeUnit.SECONDS.sleep(2);
 
 		for (int i = 1; i <= 5; i++) {
@@ -284,24 +321,24 @@ public class Main {
 
 		if (primeiro.getGol() > segundo.getGol()) {
 			System.out.println("ACABOOOOOOOOOOOOU!!");
-			System.out.println(primeiro.getNomeJogador().toUpperCase() + " É O GRANDE CAMPEÃO!");
+			System.out.println(primeiro.getNomeJogador().toUpperCase() + " VENCE A PARTIDAAAA!"); //retira tratamento por gênero
 		} else if (segundo.getGol() > primeiro.getGol()) {
 			System.out.println("ACABOOOOOOOOOOOOU!!");
-			System.out.println(segundo.getNomeJogador().toUpperCase() + " É O GRANDE CAMPEÃO!");
+			System.out.println(segundo.getNomeJogador().toUpperCase() + " VENCE A PARTIDAAAA!"); //retira tratamento por gênero
 		} else {
 			System.out
 					.println("FINAL DA SÉRIE DE 5 COBRANÇAS!! TUDO IGUAL ATÉ AQUI! VAMOS PARA AS COBRANÇAS ALTERNADAS");
 			TimeUnit.SECONDS.sleep(2);
-			System.out.println("AGORA, SE O " + primeiro.getNomeJogador().toUpperCase() + "MARCAR O GOL E O "
+			System.out.println("AGORA, SE " + primeiro.getNomeJogador().toUpperCase() + "MARCAR O GOL E " //retira tratamento por gênero
 					+ segundo.getNomeJogador().toUpperCase() + " ERRAR NA" + " SEQUÊNCIA, "
-					+ primeiro.getNomeJogador().toUpperCase() + " SERÁ O GRANDE CAMPEÃO!");
+					+ primeiro.getNomeJogador().toUpperCase() + " VENCERÁ ESTE JOGO!"); //retira tratamento por gênero
 			TimeUnit.SECONDS.sleep(2);
-			System.out.println("DA MESMA FORMA QUE SE O " + primeiro.getNomeJogador().toUpperCase() + " ERRAR SUA "
+			System.out.println("DA MESMA FORMA QUE SE " + primeiro.getNomeJogador().toUpperCase() + " ERRAR SUA "
 					+ "COBRANÇA E O " + segundo.getNomeJogador().toUpperCase()
-					+ " MARCAR NA SEQUÊNCIA, ELE SERÁ O CAMPEÃO!");
+					+ " MARCAR NA SEQUÊNCIA, VENCERÁ ESTE JOGO!!"); //retira tratamento por gênero
 			TimeUnit.SECONDS.sleep(2);
 			System.out.println(
-					"CASO AMBOS CONVERTEREM OU ERRAREM SUAS COBRANÇAS, SEGUIMOS PARA MAIS UMA COBRANÇA DE CADA!");
+					"CASO CONVERTAM OU ERREM SUAS COBRANÇAS, SEGUIMOS PARA MAIS UMA COBRANÇA DE CADA!"); //retira tratamento por gênero
 			TimeUnit.SECONDS.sleep(2);
 			System.out.println("VAMOS LÁ! "+primeiro.getNomeJogador().toUpperCase()+" JÁ ESTÁ SE PREPARANDO PRAS COBRANÇAS ALTERNADAS! ");
 		}

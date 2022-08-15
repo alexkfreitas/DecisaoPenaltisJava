@@ -2,19 +2,19 @@ package projetogeneration;
 
 public class Jogador {
 
-	String nomeJogador;
-	int idade, peso;
+	String nomeJogador,terceiraPessoa,terceiraPessoaPosse;;
+	int idade, peso, genero;
 	double altura;
 
-	public Jogador(String nomeJogador, int idade, int peso, double altura) {
+	public Jogador(String nomeJogador, int idade, int peso, double altura, int genero) {
 		
 		this.nomeJogador = nomeJogador;
 		this.idade = idade;
 		this.peso = peso;
 		this.altura = altura;
+		this.genero = genero;
+		
 	}
-	
-	
 
 	public Jogador() {
 		super();
@@ -54,6 +54,17 @@ public class Jogador {
 		this.altura = altura;
 	}
 	
+	public int getGenero() {
+		return genero;
+			
+	}
 	
+	public void setTerceiraPessoa(String pronome) {
+		this.terceiraPessoa = pronome;
+	}
+	
+	public void setTerceiraPessoaPosse(String pronome) {
+		this.terceiraPessoaPosse = pronome;
+	}
 	
 }

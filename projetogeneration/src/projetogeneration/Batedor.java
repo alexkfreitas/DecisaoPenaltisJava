@@ -4,15 +4,14 @@ public class Batedor extends Jogador {
 
 	String pernaPreferida;
 	private int gol;
-
-	public Batedor(String nomeJogador, int idade, int peso, double altura, String pernaPreferida, int gol) {
-		super(nomeJogador, idade, peso, altura);
+	
+	public Batedor(String nomeJogador, int idade, int peso, double altura, int genero, String pernaPreferida, int gol) {
+		super(nomeJogador, idade, peso, altura, genero);
 		this.pernaPreferida = pernaPreferida;
 		this.gol = gol;
-		
 	}
-	
-	
+
+
 	public Batedor() {}
 
 
