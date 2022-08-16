@@ -8,7 +8,7 @@ public class Main {
 
 	public static void main(String[] args) throws InterruptedException {
 
-		int canto = 0, op, cantodefesa, player = 1;
+		int canto=0, op, cantodefesa, player = 1, potencia=0;
 		Random random = new Random();
 		Batedor primeiro = new Batedor();
 		Batedor segundo = new Batedor();
@@ -45,6 +45,7 @@ public class Main {
 				primeiro.setPronomeObliquo("U");
 				primeiro.setPronomePessoal("ELU");
 				primeiro.setPronomeCampeao("VENCEDORE");
+				break;
 			default:
 				System.out.println("Opção inválida! Favor tentar novamente!");
 			}
@@ -72,7 +73,7 @@ public class Main {
 		do {
 			System.out.print(
 					"\nQual goleiro você quer enfrentar?" + "\n1 - Taffarel" + "\n2 - Cássio" + "\n3 - Rogério Ceni"
-							+ "\n4 - Marcos" + "\n5 - Buffon" + "\n6 - Neuer" + "\nDigite a opção escolhida: ");
+							+ "\n4 - Marcos" + "\n5 - Gianluigi Buffon" + "\n6 - Manuel Neuer" + "\nDigite a opção escolhida: ");
 			op = teclado.nextInt();
 			switch (op) {
 
@@ -83,7 +84,7 @@ public class Main {
 				goleiro1.setNomeJogador("Cássio");
 				break;
 			case 3:
-				goleiro1.setNomeJogador("Rogério Ceni");
+				goleiro1.setNomeJogador("Rogério");
 				break;
 			case 4:
 				goleiro1.setNomeJogador("Marcos");
@@ -122,12 +123,13 @@ public class Main {
 			case 2:
 				segundo.setPronomeObliquo("A");
 				segundo.setPronomePessoal("ELA");
-				segundo.setPronomeCampeao("CAMPEÃO");
+				segundo.setPronomeCampeao("CAMPEÃ");
 				break;
 			case 3:
-				segundo.setPronomeObliquo(" ");
-				segundo.setPronomePessoal(" ");
-				segundo.setPronomeCampeao("CAMPEÃO");
+				segundo.setPronomeObliquo("U");
+				segundo.setPronomePessoal("ELU");
+				segundo.setPronomeCampeao("VENCEDORE");
+				break;
 			default:
 				System.out.println("Opção inválida! Favor tentar novamente!");
 
@@ -154,8 +156,8 @@ public class Main {
 
 		do {
 			System.out.println(
-					"Qual goleiro você quer enfrentar?" + "\n1 - Taffarel" + "\n2 - Cássio" + "\n3 - Rogério Ceni"
-							+ "\n4 - Marcos" + "\n5 - Buffon" + "\n6 - Neuer" + "\nDigite a opção escolhida: ");
+					"\nQual goleiro você quer enfrentar?" + "\n1 - Taffarel" + "\n2 - Cássio" + "\n3 - Rogério Ceni"
+							+ "\n4 - Marcos" + "\n5 - Gianluigi Buffon" + "\n6 - Manuel Neuer" + "\nDigite a opção escolhida: ");
 			op = teclado.nextInt();
 			switch (op) {
 
@@ -166,7 +168,7 @@ public class Main {
 				goleiro2.setNomeJogador("Cássio");
 				break;
 			case 3:
-				goleiro2.setNomeJogador("Rogério Ceni");
+				goleiro2.setNomeJogador("Rogério");
 				break;
 			case 4:
 				goleiro2.setNomeJogador("Marcos");
@@ -243,44 +245,71 @@ public class Main {
 		//TimeUnit.SECONDS.sleep(2);
 		System.out.println("É UM MOMENTO QUE EXIGE UM PSICOLÓGICO MUUUUUUUUITO GRAAANDE, AMIGO!!!");
 		//TimeUnit.SECONDS.sleep(2);
+		
+		
+		
+		
+		// ------------INÍCIO DAS 5 COBRANÇAS----------------
+		
 
 		for (int i = 1; i <= 5; i++) {
 
-			do {
+			// ----- CONFERE POSSIBILIDADE DO JOGO ACABAR APÓS A COBRANÇA DO PLAYER 1 --------
 
 				if (i == 4 && segundo.getGol()-primeiro.getGol()==2) {
 					System.out.println("ATENÇÃO! CASO "+primeiro.getPronomeObliquo()+" " + primeiro.getNomeJogador().toUpperCase() + " DESPERDICE SUA PRÓXIMA"
-									+ "COBRANÇA, " + segundo.getPronomeObliquo()+" "+ segundo.getNomeJogador().toUpperCase() + "SERÁ "
+									+ "COBRANÇA, " + segundo.getPronomeObliquo()+" "+ segundo.getNomeJogador().toUpperCase() + " SERÁ "
 											+ segundo.getPronomeObliquo()+" GRANDE "+segundo.getPronomeCampeao()+"!");
 				} else if (i==4 && primeiro.getGol()-segundo.getGol()==2 ) {
 					System.out.println("ATENÇÃO! CASO "+primeiro.getPronomeObliquo()+" " + primeiro.getNomeJogador().toUpperCase() + " ACERTE SUA PRÓXIMA "
 							+ "COBRANÇA, SERÁ "+primeiro.getPronomeObliquo()+" GRANDE "+primeiro.getPronomeCampeao()+"!");
 				} else if(i==5 && segundo.getGol()-primeiro.getGol()==1) {
 					System.out.println("ATENÇÃO! CASO "+primeiro.getPronomeObliquo()+" " + primeiro.getNomeJogador().toUpperCase() + " DESPERDICE SUA PRÓXIMA "
-							+ "COBRANÇA, " +segundo.getPronomeObliquo()+" "+ segundo.getNomeJogador().toUpperCase() + "SERÁ "
+							+ "COBRANÇA, " +segundo.getPronomeObliquo()+" "+ segundo.getNomeJogador().toUpperCase() + " SERÁ "
 									+ segundo.getPronomeObliquo()+" GRANDE "+segundo.getPronomeCampeao()+"!");
-				}else if(i==5 && primeiro.getGol()-segundo.getGol()==1) {
+				} else if(i==5 && primeiro.getGol()-segundo.getGol()==1) {
 					System.out.println("ATENÇÃO! CASO "+primeiro.getPronomeObliquo()+" " + primeiro.getNomeJogador().toUpperCase() + " ACERTE SUA PRÓXIMA "
 							+ "COBRANÇA, SERÁ "+primeiro.getPronomeObliquo()+" GRANDE "+primeiro.getPronomeCampeao()+"!");
 				}
 
+			// ----------- COBRANÇA PLAYER 1 --------------------
+				
 				if (player == 1) {
 					//TimeUnit.SECONDS.sleep(2);
-					System.out.println("|");
-					System.out.print("\n\n---------------------" + primeiro.getNomeJogador().toUpperCase()
-							+ ", ESCOLHA O CANTO DO CHUTE---------------------"
+					do {
+						System.out.print("\n\n---------------------" + primeiro.getNomeJogador().toUpperCase()
+								+ ", SUA VEZ---------------------"
 
-							+ "\n\n1 - Canto direito" + "\n2 - Canto esquerdo" + "\n3 - Meio"
-							+ "\nEscolha um canto para chutar: ");
-					canto = teclado.nextInt();
-					if (canto < 1 || canto > 3) {
+								+ "\n\n1 - Canto inferior direito" 
+								+ "\n2 - Canto superior direito" 
+								+ "\n3 - Meio superior"
+								+ "\n4 - Meio inferior"
+								+ "\n5 - Canto superior esquerdo"
+								+ "\n6 - Canto inferior esquerdo"
+								+ "\nEscolha um canto para chutar: ");
+						canto = teclado.nextInt();
+						if(canto < 1 || canto > 6) {
+							System.out.println("Opção inválida! Escolha entre as opções de 1 a 6!");
+						}
+					}while(canto < 1 || canto > 6);
+					
+				do {
+					System.out.print("\n\n1-Baixa"
+							+ "\n2-Média"
+							+ "\n3-Alta"
+							+ "\nEscolha a potência do chute: ");
+					potencia = teclado.nextInt();
+					if (potencia < 1 || potencia > 3) {
 						System.out.println("Opção inválida! Escolha entre as opções de 1 a 3!");
-					} else {
+					} 
+				} while (potencia < 1 || potencia > 3);
+					
+					
 						//TimeUnit.SECONDS.sleep(2);
 						primeiro.chutar(canto);
 						System.out.println(primeiro.getNomeJogador().toUpperCase() + " CAMINHA ATÉ A MARCA DO PÊNALTI");
 						//TimeUnit.SECONDS.sleep(2);
-						System.out.println(primeiro.getPronomePessoal()+"SE PREPARA PRA COBRANÇA!");
+						System.out.println(primeiro.getPronomePessoal()+" SE PREPARA PRA COBRANÇA!");
 						//TimeUnit.SECONDS.sleep(2);
 						System.out.println("AUTORIZA O ÁRBITRO!");
 						//TimeUnit.SECONDS.sleep(2);
@@ -288,10 +317,9 @@ public class Main {
 						//TimeUnit.SECONDS.sleep(2);
 						System.out.println("PÉ " + primeiro.getPernaPreferida() + " NA BOOOOOOOOLAAA!");
 						//TimeUnit.SECONDS.sleep(2);
-//						cantodefesa = random.nextInt(3) + 1;
-						cantodefesa = 1;
-						goleiro1.defender(cantodefesa, canto);
-						if (cantodefesa != canto) {
+						cantodefesa = random.nextInt(6) + 1;
+						
+						if (goleiro1.defender(cantodefesa, canto, potencia)) {
 							primeiro.somaGol();
 						}
 						if (i == 4 && segundo.getGol()-primeiro.getGol()==2) {
@@ -308,14 +336,15 @@ public class Main {
 							player=3;
 						}
 						player++;
-					}
+					
 				}
-			} while (canto < 1 || canto > 3);
+			
 
 			System.out.println("PLACAR: " + primeiro.getNomeJogador() + " " + primeiro.getGol() + " X "
 					+ segundo.getGol() + " " + segundo.getNomeJogador());
 
-			do {
+				// ----------CONFERE POSSIBILIDADE DO JOGO ACABAR APÓS COBRANÇA DO PLAYER 2-----------
+			
 				if (player == 2) {
 				if (i == 3 && primeiro.getGol()-segundo.getGol()==3) {
 					System.out.println("ATENÇÃO! SE "+segundo.getPronomeObliquo()+" " + segundo.getNomeJogador().toUpperCase() + " ERRAR SUA PRÓXIMA "
@@ -330,7 +359,7 @@ public class Main {
 				} else if (i == 4 && primeiro.getGol()-segundo.getGol()==2) {
 					System.out.println("ATENÇÃO! SE "+segundo.getPronomeObliquo()+" " + segundo.getNomeJogador().toUpperCase() + " ERRAR SUA PRÓXIMA "
 							+ "COBRANÇA, A DISPUTA ACABA E "+primeiro.getPronomeObliquo()+" " + primeiro.getNomeJogador().toUpperCase()
-							+ " SERÁ "+primeiro.getPronomeObliquo()+" GRANDE "+segundo.getPronomeCampeao()+"!");
+							+ " SERÁ "+primeiro.getPronomeObliquo()+" GRANDE "+primeiro.getPronomeCampeao()+"!");
 				} else if (i==5 && primeiro.getGol()-segundo.getGol()==1) {
 					System.out.println("ATENÇÃO! SE "+segundo.getPronomeObliquo()+" " + segundo.getNomeJogador().toUpperCase() + " ERRAR SUA PRÓXIMA "
 							+ "COBRANÇA, A DISPUTA ACABA E "+primeiro.getPronomeObliquo()+" " + primeiro.getNomeJogador().toUpperCase()
@@ -340,22 +369,41 @@ public class Main {
 							+ " CONVERTER SUA PRÓXIMA COBRANÇA, SERÁ "+segundo.getPronomeObliquo()+" GRANDE " +segundo.getPronomeCampeao()+"!");
 				}
 
-				
+				// -------COBRANÇA PLAYER 2-------------
+				do {
 					//TimeUnit.SECONDS.sleep(2);
 					System.out.print("\n---------------------" + segundo.getNomeJogador().toUpperCase()
-							+ ", ESCOLHA O CANTO DO CHUTE---------------------"
+							+ ", SUA VEZ---------------------"
 
-							+ "\n\n1 - Canto direito" + "\n2 - Canto esquerdo" + "\n3 - Meio"
+							+ "\n\n1 - Canto inferior direito" 
+							+ "\n2 - Canto superior direito" 
+							+ "\n3 - Meio superior"
+							+ "\n4 - Meio inferior"
+							+ "\n5 - Canto superior esquerdo"
+							+ "\n6 - Canto inferior esquerdo"
 							+ "\nEscolha um canto para chutar: ");
 					canto = teclado.nextInt();
-					if (canto < 1 || canto > 3) {
+					if (canto < 1 || canto > 6) {
+						System.out.println("Opção inválida! Escolha entre as opções de 1 a 6!");
+					}
+				} while (canto < 1 || canto > 6);
+				
+				do {
+					System.out.print("\n\n1-Baixa"
+							+ "\n2-Média"
+							+ "\n3-Alta"
+							+ "\nEscolha a potência do chute: ");
+					potencia = teclado.nextInt();
+					if (potencia < 1 || potencia > 3) {
 						System.out.println("Opção inválida! Escolha entre as opções de 1 a 3!");
-					} else {
+					} 
+				} while (potencia < 1 || potencia > 3);
+					
 						//TimeUnit.SECONDS.sleep(2);
 						segundo.chutar(canto);
 						System.out.println(segundo.getNomeJogador().toUpperCase() + " CAMINHA ATÉ A MARCA DO PÊNALTI");
 						//TimeUnit.SECONDS.sleep(2);
-						System.out.println(primeiro.getPronomePessoal()+"SE PREPARA PRA COBRANÇA!");
+						System.out.println(primeiro.getPronomePessoal()+" SE PREPARA PRA COBRANÇA!");
 						//TimeUnit.SECONDS.sleep(2);
 						System.out.println("AUTORIZA O ÁRBITRO!");
 						//TimeUnit.SECONDS.sleep(2);
@@ -363,10 +411,8 @@ public class Main {
 						//TimeUnit.SECONDS.sleep(2);
 						System.out.println("PÉ " + segundo.getPernaPreferida() + " NA BOOOOOOOOLAAA!");
 						//TimeUnit.SECONDS.sleep(2);
-//						cantodefesa = random.nextInt(3) + 1;
-						cantodefesa = 1;
-						goleiro2.defender(cantodefesa, canto);
-						if (cantodefesa != canto) {
+						cantodefesa = random.nextInt(6) + 1;
+						if (goleiro2.defender(cantodefesa, canto, potencia)) {
 							segundo.somaGol();
 						} 
 						if (i == 3 && primeiro.getGol()-segundo.getGol()==3) {
@@ -382,9 +428,9 @@ public class Main {
 						System.out.println("PLACAR: " + primeiro.getNomeJogador() + " " + primeiro.getGol() + " X "
 								+ segundo.getGol() + " " + segundo.getNomeJogador());
 
-					}
+					
 				}
-			} while (canto < 1 || canto > 3);
+			
 
 			
 		}
@@ -419,27 +465,41 @@ public class Main {
 			// ------------------------------- ALTERNADAS----------------------------------
 
 			do {
-
-				do {
-
 					if (player == 1) {
-						//TimeUnit.SECONDS.sleep(2);
-						System.out.println("|");
-						System.out.print("\n\n---------------------" + primeiro.getNomeJogador().toUpperCase()
-								+ ", ESCOLHA O CANTO DO CHUTE---------------------"
+						do {
+							//TimeUnit.SECONDS.sleep(2);
+							System.out.print("\n\n---------------------" + primeiro.getNomeJogador().toUpperCase()
+									+ ", SUA VEZ---------------------"
 
-								+ "\n\n1 - Canto direito" + "\n2 - Canto esquerdo" + "\n3 - Meio"
-								+ "\nEscolha um canto para chutar: ");
-						canto = teclado.nextInt();
-						if (canto < 1 || canto > 3) {
-							System.out.println("Opção inválida! Escolha entre as opções de 1 a 3!");
-						} else {
+									+ "\n\n1 - Canto inferior direito" 
+									+ "\n2 - Canto superior direito" 
+									+ "\n3 - Meio superior"
+									+ "\n4 - Meio inferior"
+									+ "\n5 - Canto superior esquerdo"
+									+ "\n6 - Canto inferior esquerdo"
+									+ "\nEscolha um canto para chutar: ");
+							canto = teclado.nextInt();
+							if (canto < 1 || canto > 6) {
+								System.out.println("Opção inválida! Escolha entre as opções de 1 a 6!");
+							}
+						} while(canto < 1 || canto > 6);
+						
+						do {
+							System.out.print("\n\n1-Baixa"
+									+ "\n2-Média"
+									+ "\n3-Alta"
+									+ "\nEscolha a potência do chute: ");
+							potencia = teclado.nextInt();
+							if (potencia < 1 || potencia > 3) {
+								System.out.println("Opção inválida! Escolha entre as opções de 1 a 3!");
+							} 
+						} while (potencia < 1 || potencia > 3);
 							//TimeUnit.SECONDS.sleep(2);
 							primeiro.chutar(canto);
 							System.out.println(
 									primeiro.getNomeJogador().toUpperCase() + " CAMINHA ATÉ A MARCA DO PÊNALTI");
 							//TimeUnit.SECONDS.sleep(2);
-							System.out.println(primeiro.getPronomePessoal()+"SE PREPARA PRA COBRANÇA!");
+							System.out.println(primeiro.getPronomePessoal()+" SE PREPARA PRA COBRANÇA!");
 							//TimeUnit.SECONDS.sleep(2);
 							System.out.println("AUTORIZA O ÁRBITRO!");
 							//TimeUnit.SECONDS.sleep(2);
@@ -447,22 +507,16 @@ public class Main {
 							//TimeUnit.SECONDS.sleep(2);
 							System.out.println("PÉ " + primeiro.getPernaPreferida() + " NA BOOOOOOOOLAAA!");
 							//TimeUnit.SECONDS.sleep(2);
-							cantodefesa = random.nextInt(3) + 1;
-//							cantodefesa = 1;
-							goleiro1.defender(cantodefesa, canto);
-							if (cantodefesa != canto) {
+							cantodefesa = random.nextInt(6) + 1;
+							if (goleiro1.defender(cantodefesa, canto, potencia)) {
 								primeiro.somaGol();
 							}
 							player++;
-							
-						}
 					}
-				} while (canto < 1 || canto > 3);
 
 				System.out.println("PLACAR: " + primeiro.getNomeJogador() + " " + primeiro.getGol() + " X "
 						+ segundo.getGol() + " " + segundo.getNomeJogador());
-
-				do {
+				
 					if(primeiro.getGol()==segundo.getGol()) {
 						System.out.println("ATENÇÃO! CASO "+segundo.getPronomeObliquo()+" "+segundo.getNomeJogador().toUpperCase()+" ACERTE SUA "
 								+ "PRÓXIMA COBRANÇA, SERÁ "+segundo.getPronomeObliquo()+" GRANDE "+segundo.getPronomeCampeao()+"!");
@@ -472,22 +526,39 @@ public class Main {
 								+segundo.getPronomeCampeao()+"!");
 					}
 					if (player == 2) {
-						//TimeUnit.SECONDS.sleep(2);
-						System.out.print("\n---------------------" + segundo.getNomeJogador().toUpperCase()
-								+ ", ESCOLHA O CANTO DO CHUTE---------------------"
+						do {
+							//TimeUnit.SECONDS.sleep(2);
+							System.out.print("\n---------------------" + segundo.getNomeJogador().toUpperCase()
+									+ ", SUA VEZ---------------------"
 
-								+ "\n\n1 - Canto direito" + "\n2 - Canto esquerdo" + "\n3 - Meio"
-								+ "\nEscolha um canto para chutar: ");
-						canto = teclado.nextInt();
-						if (canto < 1 || canto > 3) {
-							System.out.println("Opção inválida! Escolha entre as opções de 1 a 3!");
-						} else {
+									+ "\n\n1 - Canto inferior direito" 
+									+ "\n2 - Canto superior direito" 
+									+ "\n3 - Meio superior"
+									+ "\n4 - Meio inferior"
+									+ "\n5 - Canto superior esquerdo"
+									+ "\n6 - Canto inferior esquerdo"
+									+ "\nEscolha um canto para chutar: ");
+							canto = teclado.nextInt();
+							if (canto < 1 || canto > 6) {
+								System.out.println("Opção inválida! Escolha entre as opções de 1 a 6!");
+							}
+						} while(canto < 1 || canto > 6);
+						do {
+							System.out.print("\n\n1-Baixa"
+									+ "\n2-Média"
+									+ "\n3-Alta"
+									+ "\nEscolha a potência do chute: ");
+							potencia = teclado.nextInt();
+							if (potencia < 1 || potencia > 3) {
+								System.out.println("Opção inválida! Escolha entre as opções de 1 a 3!");
+							} 
+						} while (potencia < 1 || potencia > 3);
 							//TimeUnit.SECONDS.sleep(2);
 							segundo.chutar(canto);
 							System.out.println(
 									segundo.getNomeJogador().toUpperCase() + " CAMINHA ATÉ A MARCA DO PÊNALTI");
 							//TimeUnit.SECONDS.sleep(2);
-							System.out.println(segundo.getPronomePessoal()+"SE PREPARA PRA COBRANÇA!");
+							System.out.println(segundo.getPronomePessoal()+" SE PREPARA PRA COBRANÇA!");
 							//TimeUnit.SECONDS.sleep(2);
 							System.out.println("AUTORIZA O ÁRBITRO!");
 							//TimeUnit.SECONDS.sleep(2);
@@ -495,19 +566,16 @@ public class Main {
 							//TimeUnit.SECONDS.sleep(2);
 							System.out.println("PÉ " + segundo.getPernaPreferida() + " NA BOOOOOOOOLAAA!");
 							//TimeUnit.SECONDS.sleep(2);
-							cantodefesa = random.nextInt(3) + 1;
-//							cantodefesa = 1;
-							goleiro2.defender(cantodefesa, canto);
-							if (cantodefesa != canto) {
+							cantodefesa = random.nextInt(6) + 1;
+							if (goleiro2.defender(cantodefesa, canto, potencia)) {
 								segundo.somaGol();
 							}
 							player--;
 							System.out.println("PLACAR: " + primeiro.getNomeJogador() + " " + primeiro.getGol() + " X "
 									+ segundo.getGol() + " " + segundo.getNomeJogador());
-						}
+						
 
 					}
-				} while (canto < 1 || canto > 3);
 
 			} while (primeiro.getGol() == segundo.getGol());
 
@@ -515,19 +583,11 @@ public class Main {
 			System.out.println("ACABOOOOOOOOOOOOOOUUUUUUU!!");
 			if (primeiro.getGol() > segundo.getGol()) {
 				//TimeUnit.SECONDS.sleep(2);
-				System.out.println(primeiro.getNomeJogador().toUpperCase() + " VENCE A DISPUTA!!");
-				//TimeUnit.SECONDS.sleep(2);
-				System.out.println("PLACAR FINAL: " + primeiro.getNomeJogador() + " " + primeiro.getGol() + " X "
-						+ segundo.getGol() + " " + segundo.getNomeJogador());
+				System.out.println(primeiro.getNomeJogador().toUpperCase() + " É "+primeiro.getPronomeObliquo()+" GRANDE "+primeiro.getPronomeCampeao()+"!");
 
 			} else {
 				//TimeUnit.SECONDS.sleep(2);
-				System.out.println();
-				System.out.println(segundo.getNomeJogador().toUpperCase() + " VENCE A DISPUTA!!");
-				//TimeUnit.SECONDS.sleep(2);
-				System.out.println("PLACAR FINAL: " + primeiro.getNomeJogador() + " " + primeiro.getGol() + " X "
-						+ segundo.getGol() + " " + segundo.getNomeJogador());
-
+				System.out.println(segundo.getNomeJogador().toUpperCase() + " É "+segundo.getPronomeObliquo()+" GRANDE "+segundo.getPronomeCampeao()+"!");
 			}
 
 		}
