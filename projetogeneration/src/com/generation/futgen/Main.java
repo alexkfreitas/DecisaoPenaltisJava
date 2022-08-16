@@ -1,8 +1,11 @@
-package projetogeneration;
+package com.generation.futgen;
 
 import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
+
+import com.generation.futgen.model.Batedor;
+import com.generation.futgen.model.Goleiro;
 
 public class Main {
 

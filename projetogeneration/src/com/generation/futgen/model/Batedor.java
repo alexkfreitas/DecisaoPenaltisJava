@@ -1,4 +1,4 @@
-package projetogeneration;
+package com.generation.futgen.model;
 
 public class Batedor extends Jogador {
 

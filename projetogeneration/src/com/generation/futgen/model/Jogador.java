@@ -1,6 +1,6 @@
-package projetogeneration;
+package com.generation.futgen.model;
 
-public class Jogador {
+public abstract class Jogador {
 
 	private String nomeJogador, pronomeObliquo, pronomePessoal, pronomeCampeao;
 	private int idade, peso;
@@ -17,14 +17,8 @@ public class Jogador {
 		this.pronomeCampeao = pronomeCampeao;
 		
 	}
-	
-	
 
-	public Jogador() {
-		super();
-	}
-
-
+	public Jogador() {}
 
 	public String getNomeJogador() {
 		return nomeJogador;

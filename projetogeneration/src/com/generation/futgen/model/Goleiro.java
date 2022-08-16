@@ -1,4 +1,4 @@
-package projetogeneration;
+package com.generation.futgen.model;
 
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
