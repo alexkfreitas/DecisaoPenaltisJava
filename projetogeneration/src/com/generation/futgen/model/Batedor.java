@@ -1,25 +1,20 @@
-package projetogeneration;
+package com.generation.futgen.model;
 
 public class Batedor extends Jogador {
 
-	String pernaPreferida;
+	private String pernaPreferida;
 	private int gol;
 
-	public Batedor(String nomeJogador, int idade, int peso, double altura, String pernaPreferida, int gol) {
-		super(nomeJogador, idade, peso, altura);
+	public Batedor(String nomeJogador, int idade, int peso, double altura, String pronomeObliquo, String pronomePessoal,
+			String pronomeCampeao, String pernaPreferida, int gol) {
+		super(nomeJogador, idade, peso, altura, pronomeObliquo, pronomePessoal, pronomeCampeao);
 		this.pernaPreferida = pernaPreferida;
 		this.gol = gol;
-		
 	}
-	
-	
+
+
 	public Batedor() {}
 
-
-	public void chutar(int canto) {
-		
-	}
-	
 	public void somaGol() {
 		this.gol++;
 	}
