@@ -1,10 +1,13 @@
 package com.generation.futgen.model;
 
-public abstract class Jogador {
+
+
+public class Jogador {
 
 	private String nomeJogador, pronomeObliquo, pronomePessoal, pronomeCampeao;
 	private int idade, peso;
 	private double altura;
+
 
 	public Jogador(String nomeJogador, int idade, int peso, double altura, String pronomeObliquo, String pronomePessoal, String pronomeCampeao) {
 		
@@ -18,8 +21,11 @@ public abstract class Jogador {
 		
 	}
 
-	public Jogador() {}
-
+	
+	public Jogador () {
+	}
+	
+	
 	public String getNomeJogador() {
 		return nomeJogador;
 	}

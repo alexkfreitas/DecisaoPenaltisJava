@@ -15,11 +15,6 @@ public class Batedor extends Jogador {
 
 	public Batedor() {}
 
-
-	public void chutar(int canto) {
-		
-	}
-	
 	public void somaGol() {
 		this.gol++;
 	}
