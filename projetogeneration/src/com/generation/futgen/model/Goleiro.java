@@ -36,13 +36,13 @@ public class Goleiro extends Jogador {
 					System.out.println("GOOOOOOOOOOOOOOOOOOOOOOOOOOLLLLLLLLLLLLLLL!");
 					TimeUnit.SECONDS.sleep(2);
 					System.out.println("O " + this.getNomeJogador().toUpperCase()
-							+ " ATÉ ACERTOU O CANTO, MAS O CHUTE FOI MUITO FORTE! INDEFENSÁVEL!");
+							+ " ATÉ FOI NA BOLA, MAS O CHUTE FOI MUITO FORTE! INDEFENSÁVEL!");
 					return true;
 				} else {
 					System.out.println("GOOOOOOOOOOOOOOOOOOOOOOOOOOOOOLLLLLLlllllL!");
 					TimeUnit.SECONDS.sleep(2);
 					System.out.println("MAS NEM SE O " + this.getNomeJogador().toUpperCase()
-							+ " ACERTASSE O CANTO CONSEGUIRIA DEFENDER ESSA BOLA! O CHUTE FOI MUITO FORTE!");
+							+ " FOSSE NA BOLA IRIA CONSEGUIR DEFENDER! O CHUTE FOI MUITO FORTE!");
 					return true;
 				}
 
@@ -71,9 +71,9 @@ public class Goleiro extends Jogador {
 					System.out.println("GOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOLLLLLLLLLLL!!");
 					TimeUnit.SECONDS.sleep(2);
 					System.out.println("O " + this.getNomeJogador().toUpperCase()
-							+ " ATÉ ACERTOU O CANTO, MAS O CHUTE FOI MUITO BEM COLOCADO!");
+							+ " ATÉ FOI NA BOLA, MAS O CHUTE FOI MUITO BEM COLOCADO!");
 					return true;
-				} else if (canto - cantodefesa >= 3 || cantodefesa - canto >= 3) {
+				} else if (canto - cantodefesa > 3 || cantodefesa - canto > 3) {
 					System.out.println("GOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOLLLLLLLLLL!!");
 					TimeUnit.SECONDS.sleep(2);
 					System.out.println("GOLEIRO DE UM LADO, BOLA DO OUTRO! O " + this.getNomeJogador().toUpperCase()
@@ -108,7 +108,7 @@ public class Goleiro extends Jogador {
 
 			} else {
 
-				if (canto - cantodefesa >= 3 || cantodefesa - canto >= 3) {
+				if (canto - cantodefesa > 3 || cantodefesa - canto > 3) {
 					System.out.println("GOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOLLLLLLLLLL!!");
 					TimeUnit.SECONDS.sleep(2);
 					System.out.println("QUE CATEGORIA! GOLEIRO DE UM LADO, BOLA DO OUTRO! O "
