@@ -492,7 +492,7 @@ public class Main {
 							+ primeiro.getNomeJogador().toUpperCase() + " SERÁ " + primeiro.getPronomeObliquo()
 							+ " GRANDE " + primeiro.getPronomeCampeao() + "!");
 				} else if (i == 5 && primeiro.getGol() - segundo.getGol() == 0) {
-					System.out.println("\nATENÇÃO! SE O " + segundo.getNomeJogador().toUpperCase()
+					System.out.println("\nATENÇÃO! SE "+segundo.getPronomeObliquo()+" " + segundo.getNomeJogador().toUpperCase()
 							+ " CONVERTER SUA PRÓXIMA COBRANÇA, SERÁ " + segundo.getPronomeObliquo() + " GRANDE "
 							+ segundo.getPronomeCampeao() + "!");
 				}
@@ -662,8 +662,10 @@ public class Main {
 					if (goleiro1.defender(cantodefesa, canto, potencia)) {
 						primeiro.somaGol();
 						listGolPlayer1.add("●");
+						listGolPlayer2.add("- ");
 					} else {
 						listGolPlayer1.add("x");
+						listGolPlayer2.add("- ");
 					}
 					player++;
 				}
