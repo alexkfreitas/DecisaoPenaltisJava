@@ -3,6 +3,7 @@
 Vídeo mostrando o jogo funcionando: https://www.youtube.com/watch?v=NDV2LB-N-jg&ab_channel=AlexKatanosaka
 
 
+![image](https://user-images.githubusercontent.com/63432377/206945659-22d3f8df-052b-4842-89cf-0f0732fdb974.png)
 
 ![image](https://user-images.githubusercontent.com/63432377/206945479-2ad3736a-1eaf-40f6-a315-812120c16d63.png)
 ![image](https://user-images.githubusercontent.com/63432377/206945512-695159b2-6879-42ec-9cb6-62b24a8e4d1d.png)
